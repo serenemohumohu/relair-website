@@ -70,84 +70,117 @@
     </header>
 
     <main>
-      <!-- Main Visual -->
+      <!-- ===== Main Visual ===== -->
       <section class="mv">
         <div class="swiper-container mv-swiper">
           <div class="swiper-wrapper">
+            <!-- 1 枚目 ── ウルトランスフォーマー痩身 -->
             <div class="swiper-slide">
-              <img src="mv-slimming.jpg" alt="ウルトランスフォーマー痩身" />
+              <picture>
+                <source srcset="./photo/1_sp.jpg" media="(max-width: 767px)" />
+                <img src="./photo/1.jpg" alt="ウルトランスフォーマー痩身" />
+              </picture>
               <div class="slide-caption">
                 <h2>理想のボディラインへ<br />ウルトランスフォーマー痩身</h2>
                 <p>最新鋭のマシンで、気になる脂肪に徹底アプローチ</p>
               </div>
             </div>
+
+            <!-- 2 枚目 ── オイルトリートメント -->
             <div class="swiper-slide">
-              <img src="mv-oil.jpg" alt="オイルトリートメント" />
+              <picture>
+                <source srcset="./photo/2_sp.jpg" media="(max-width: 767px)" />
+                <img src="./photo/2.jpg" alt="オイルトリートメント" />
+              </picture>
               <div class="slide-caption">
                 <h2>心身を癒す極上の時間<br />オイルトリートメント</h2>
                 <p>厳選されたオイルで、日々の疲れをリフレッシュ</p>
               </div>
             </div>
+
+            <!-- 3 枚目 ── メンズ脱毛 -->
             <div class="swiper-slide">
-              <img src="mv-datsumou.jpg" alt="脱毛" />
+              <picture>
+                <source srcset="./photo/3_sp.jpg" media="(max-width: 767px)" />
+                <img src="./photo/3.jpg" alt="メンズ脱毛" />
+              </picture>
               <div class="slide-caption">
                 <h2>清潔感は、男の武器<br />メンズ脱毛</h2>
                 <p>毎日の面倒な自己処理から解放され、自信のある肌へ</p>
               </div>
             </div>
+
+            <!-- 4 枚目 ── 骨盤矯正 -->
             <div class="swiper-slide">
-              <img src="mv-pelvis.jpg" alt="骨盤矯正" />
+              <picture>
+                <source srcset="./photo/4_sp.jpg" media="(max-width: 767px)" />
+                <img src="./photo/4.jpg" alt="骨盤矯正" />
+              </picture>
               <div class="slide-caption">
                 <h2>身体の土台を整える<br />骨盤矯正</h2>
                 <p>不調の原因にアプローチし、健康的な毎日をサポート</p>
               </div>
             </div>
+
+            <!-- 5 枚目 ── 猫背矯正 -->
             <div class="swiper-slide">
-              <img src="mv-posture.jpg" alt="猫背矯正" />
+              <picture>
+                <source srcset="./photo/5_sp.jpg" media="(max-width: 767px)" />
+                <img src="./photo/5.jpg" alt="猫背矯正" />
+              </picture>
               <div class="slide-caption">
                 <h2>第一印象を変える<br />猫背矯正</h2>
                 <p>美しい姿勢を手に入れ、颯爽とした立ち姿へ</p>
               </div>
             </div>
           </div>
+
+          <!-- Swiper パーツはそのまま -->
           <div class="swiper-pagination"></div>
-          <!-- 左右の矢印ナビゲーションはCSSで非表示 -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
       </section>
 
-      <!-- (他のセクションは変更なし ) -->
+      <!-- ===== 施術紹介 ===== -->
       <section id="treatment" class="section-container">
         <h2 class="section-title">TREATMENT</h2>
         <p class="section-subtitle">施術紹介</p>
+
         <div class="card-grid">
+          <!-- メンズ脱毛 -->
           <div class="card">
-            <img src="treatment-datsumou.jpg" alt="脱毛" />
+            <img src="./photo/men_datsumou.png" alt="メンズ脱毛" />
             <h3>メンズ脱毛</h3>
             <p>
               最新の脱毛機で痛みを抑え、スピーディーに効果を実感。清潔感のある肌へ導きます。
             </p>
             <a href="#" class="btn-more">詳しく見る</a>
           </div>
+
+          <!-- 痩身 -->
           <div class="card">
-            <img src="treatment-slimming.jpg" alt="痩身" />
+            <img src="./photo/slimming.png" alt="痩身" />
             <h3>痩身</h3>
             <p>
               ウルトランスフォーマーで脂肪を分解・燃焼。引き締まった理想のボディを目指します。
             </p>
             <a href="#" class="btn-more">詳しく見る</a>
           </div>
+
+          <!-- 骨盤・猫背矯正 -->
           <div class="card">
-            <img src="treatment-pelvis.jpg" alt="骨盤矯正" />
+            <img src="./photo/pelvic_correction.jpg" alt="骨盤・猫背矯正" />
             <h3>骨盤・猫背矯正</h3>
             <p>
               身体の歪みを整え、根本から不調を改善。美しい姿勢と健康な身体作りをサポートします。
             </p>
             <a href="#" class="btn-more">詳しく見る</a>
           </div>
+
+          <!-- オイルトリートメント -->
           <div class="card">
-            <img src="treatment-oil.jpg" alt="オイルトリートメント" />
+            <img src="./photo/oil_treatment.jpg" alt="オイルトリートメント" />
             <h3>オイルトリートメント</h3>
             <p>
               心と身体を深く癒すリラクゼーション。日々のストレスから解放される至福のひとときを。
@@ -156,12 +189,13 @@
           </div>
         </div>
       </section>
+
       <section id="staff" class="section-container bg-light">
         <h2 class="section-title">STAFF</h2>
         <p class="section-subtitle">スタッフ紹介</p>
         <div class="staff-container">
           <div class="staff-photo">
-            <img src="staff-group.jpg" alt="スタッフ集合写真" />
+            <img src="./photo/staff_group.png" alt="スタッフ集合写真" />
           </div>
           <div class="staff-text">
             <h3>プロフェッショナルチームが<br />あなたをお迎えします</h3>
@@ -201,21 +235,21 @@
         <p class="section-subtitle">美容コラム</p>
         <div class="card-grid">
           <a href="#" class="column-card">
-            <img src="column1.jpg" alt="コラム1" />
+            <img src="./photo/column_datumou.png" alt="コラム1" />
             <div class="column-body">
               <time>2025.07.16</time>
               <h4>【メンズ脱毛】始める前に知っておきたい5つのこと</h4>
             </div>
           </a>
           <a href="#" class="column-card">
-            <img src="column2.jpg" alt="コラム2" />
+            <img src="./photo/posture_towel_stretch.png" alt="コラム2" />
             <div class="column-body">
               <time>2025.07.10</time>
               <h4>自宅でできる！簡単ストレッチで猫背を改善する方法</h4>
             </div>
           </a>
           <a href="#" class="column-card">
-            <img src="column3.jpg" alt="コラム3" />
+            <img src="./photo/slimming_esthe_tape.jpg" alt="コラム3" />
             <div class="column-body">
               <time>2025.07.05</time>
               <h4>夏に向けて始めたい！効果的な痩身エステの選び方</h4>
