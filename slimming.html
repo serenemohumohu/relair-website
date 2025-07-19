@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>痩身・筋膜リリース - トータルビューティー リレア</title>
+    <!-- 共通CSSとページ固有CSSを読み込み -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- トップページと共通のヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./photo/relair_logo.png" alt="トータルビューティー リレア" class="logo-img" />
+                </a>
+            </h1>
+            <ul class="header-nav">
+                <li><a href="index.html#treatment">施術紹介</a></li>
+                <li><a href="index.html#staff">スタッフ紹介</a></li>
+                <li><a href="index.html#voice">お客様の声</a></li>
+                <li><a href="index.html#column">美容コラム</a></li>
+                <li><a href="index.html#access">店舗情報</a></li>
+            </ul>
+            <div class="header-buttons">
+                <a href="https://lin.ee/5N9K074" class="header-btn line" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="header-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPER</a>
+                <a href="recruit.html" class="header-btn recruit">セラピスト募集</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="global-nav" id="global-nav">
+            <ul>
+                <li><a href="index.html#treatment">施術紹介</a></li>
+                <li><a href="index.html#staff">スタッフ紹介</a></li>
+                <li><a href="index.html#voice">お客様の声</a></li>
+                <li><a href="index.html#column">美容コラム</a></li>
+                <li><a href="index.html#access">店舗情報</a></li>
+                <li class="nav-sp-buttons">
+                    <a href="https://lin.ee/5N9K074" class="header-btn line" target="_blank" rel="noopener noreferrer">公式LINEで予約</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="header-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPERで予約</a>
+                    <a href="recruit.html" class="header-btn recruit">セラピスト募集</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <!-- ファーストビュー -->
+        <section class="page-hero" style="background-image: url('./photo/slimming_fv.jpg' );">
+            <div class="page-hero-inner">
+                <h1 class="page-title anim-fade-in">SLIMMING & BODY CARE</h1>
+                <p class="page-subtitle anim-fade-in">“神の手”マシンで、身体の凝りとラインを解放する。</p>
+            </div>
+        </section>
+
+        <!-- CTAエリア -->
+        <section class="cta-bar anim-fade-in">
+            <div class="container">
+                <div class="cta-content">
+                    <p class="cta-text">
+                        <span class="highlight">頑固な凝り改善コース</span>
+                        <span class="price">¥4,620</span>
+                    </p>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" target="_blank" rel="noopener noreferrer" class="cta-btn">今すぐ体験コースを予約する</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 問題提起 -->
+        <section class="section anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">その不調、諦めていませんか？</h2>
+                <p class="section-subtitle">長年の悩みも、最新テクノロジーが解決の糸口になるかもしれません 。</p>
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <h3 class="problem-title">何をしても取れない凝り</h3>
+                        <p>マッサージに行ってもすぐ元通り、慢性的な首・肩こりや背中のハリに悩んでいる…</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3 class="problem-title">崩れてきたボディライン</h3>
+                        <p>食事制限や運動では落ちない脂肪、気になるセルライト、むくみで身体が重い…</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3 class="problem-title">常に感じる身体の不調</h3>
+                        <p>疲れが取れにくい、代謝が落ちて痩せにくくなった、身体の冷えを感じる…</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 解決策 -->
+        <section class="section bg-beige anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">ウルトランスフォーマーが、身体の根本にアプローチ</h2>
+                <p class="section-subtitle">1台4役の多機能マシンで、凝り・脂肪・歪みを同時にケア。</p>
+                <div class="benefit-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💆‍♀️</div>
+                        <h3 class="benefit-title">深層部の凝りを解放</h3>
+                        <p>独自開発の「筋膜リリース」機能で、癒着した筋膜を剥がし、長年の凝りや痛みを根本から和らげます。</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🔥</div>
+                        <h3 class="benefit-title">脂肪燃焼を促進</h3>
+                        <p>ラジオ波で深部を温め、脂肪やセルライトにアプローチ。代謝を上げ、痩せやすい身体作りをサポートします。</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">✨</div>
+                        <h3 class="benefit-title">美しいボディラインへ</h3>
+                        <p>吸引機能でリンパの流れを促進し、老廃物の排出をサポート。むくみを解消し、引き締まったラインへ導きます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 強み・特徴 -->
+        <section class="section anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">ウルトランスフォーマーとは？</h2>
+                <p class="section-subtitle">リレアが導入する“神の手”マシンの秘密</p>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <img src="./photo/urutransformar.jpg" alt="1台4役の多機能" class="feature-img">
+                        <div class="feature-text">
+                            <h3>1台4役のシナジー効果</h3>
+                            <p>【筋膜リリース】【吸引ドレナージュ】【ラジオ波】【LED】の4つの機能を搭載。これらを組み合わせることで、単一機能のマシンでは実現できない相乗効果を生み出し、あらゆる身体の悩みに対応します。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <img src="./photo/deep-myofascial-release.jpg" alt="深層筋膜にアプローチ" class="feature-img">
+                        <div class="feature-text">
+                            <h3>世界初の独自技術「深層筋膜リリース」</h3>
+                            <p>手技では届かない身体の深層部にある「深層筋膜」にまでアプローチできるのが最大の特徴。筋肉の柔軟性を高め、可動域を広げ、根本的な体質改善を目指します。</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <img src="./photo/less-pain-and-downtime.jpg" alt="痛みやダウンタイムが少ない" class="feature-img">
+                        <div class="feature-text">
+                            <h3>心地よい施術体験</h3>
+                            <p>身体を温めながらほぐしていくため、痛みはほとんどありません。リラックスして施術を受けられ、ダウンタイムもないため、お仕事帰りにも気軽にお立ち寄りいただけます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 料金プラン -->
+        <section class="section bg-beige anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">料金プラン</h2>
+                <p class="section-subtitle">お客様のお悩みに合わせた多彩なコースをご用意しています。</p>
+                <div class="pricing-table">
+                    <div class="pricing-row">
+                        <div class="pricing-service">【神の手マシン】筋膜リリース♪首肩、背中の頑固な凝り改善コース40分</div>
+                        <div class="pricing-note"></div>
+                        <div class="pricing-price">¥4,620</div>
+                    </div>
+                    <div class="pricing-row">
+                        <div class="pricing-service">【神の手マシン】筋膜リリース×吸引ほぐし ウルトラ背面集中ケア60分</div>
+                        <div class="pricing-note"></div>
+                        <div class="pricing-price">¥6,050</div>
+                    </div>
+                    <div class="pricing-row">
+                        <div class="pricing-service">【ウルトラ級全身デトックス】90分</div>
+                        <div class="pricing-note">初回</div>
+                        <div class="pricing-price">¥11,000</div>
+                    </div>
+                    <div class="pricing-row">
+                        <div class="pricing-service">【ウルトラ級上半身集中 デトックス】60分コース</div>
+                        <div class="pricing-note">初回</div>
+                        <div class="pricing-price">¥7,700</div>
+                    </div>
+                    <div class="pricing-row">
+                        <div class="pricing-service">【ウルトラ級下半身集中 デトックス】60分コース</div>
+                        <div class="pricing-note">初回</div>
+                        <div class="pricing-price">¥7,700</div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/coupon/" class="btn-more" target="_blank" rel="noopener noreferrer">全てのクーポン・メニューを見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ご利用の流れ (共通のため変更なし ) -->
+        <section class="section anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">ご利用の流れ</h2>
+                <p class="section-subtitle">初めての方でも安心。簡単4ステップ。</p>
+                <div class="flow-steps">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">ご予約</h3>
+                        <p>当ページの予約ボタンからご希望の日時をお選びください。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">カウンセリング</h3>
+                        <p>専門スタッフが身体の状態やお悩みをお伺いし、最適なプランをご提案します。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">施術</h3>
+                        <p>プライバシーに配慮した個室で、丁寧に施術します。心地よい温かさでリラックスできます。</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <h3 class="step-title">アフターケア</h3>
+                        <p>施術後の身体の状態を確認し、効果を長持ちさせるためのアドバイスをさせていただきます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 -->
+        <section class="section bg-beige anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">よくあるご質問</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>施術は痛いですか？</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>ラジオ波で身体を温めながら施術を行うため、痛みはほとんどありません。多くの方が「温かくて気持ちいい」と感じられます。凝りが強い部分は多少の刺激を感じることがありますが、強さは調整可能ですのでご安心ください。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>1回でも効果はありますか？</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>はい、多くの方が1回の施術で身体が軽くなる、ボディラインがスッキリするなどの効果を実感されます。継続することで、より効果が定着し、痩せやすく疲れにくい体質へと改善していきます。</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>どのくらいのペースで通うのがおすすめですか？</span>
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>お客様の身体の状態や目的によりますが、初めのうちは1〜2週間に1回のペースで通っていただくと効果を実感しやすくなります。その後は、メンテナンスとして月に1回程度のペースをおすすめしています。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 店舗情報・アクセス (共通) -->
+        <section id="access" class="section anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">ACCESS</h2>
+                <p class="section-subtitle">店舗情報</p>
+                <div class="access-container">
+                    <div class="access-info">
+                        <h3>トータルビューティー リレア</h3>
+                        <p>〒874-0910<br />大分県別府市石垣西3-2-21<br />Domus Ishigaki w02号</p>
+                        <p><strong>電話番号:</strong> 050-8887-1232</p>
+                        <p><strong>アクセス:</strong><br />【駐車場完備】<br />別府駅から車で5分・徒歩20分<br />南石垣バス停から徒歩1分</p>
+                        <p><strong>営業時間:</strong><br />月曜～土曜 10:00～20:00</p>
+                        <p><strong>定休日:</strong><br />日曜・祝日不定休</p>
+                    </div>
+                    <div class="access-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.088301592446!2d131.4829583762579!3d33.29111897336199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a347a5997631%3A0x889c288965882c5!2z44OI44Kq44K%2F44Or44O744K544Kv44OG44Kj44K544O844Oa44O8IOODreODoOOCouOCog!5e0!3m2!1sja!2sjp!4v1721142647653!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター (共通 ) -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">トータルビューティー リレア</div>
+            <div class="footer-contact">
+                <p>ご予約・お問い合わせはこちら</p>
+                <div class="footer-buttons">
+                    <a href="https://lin.ee/5N9K074" class="footer-btn line" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="footer-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPER</a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html#treatment">施術紹介</a>
+                <a href="index.html#staff">スタッフ紹介</a>
+                <a href="index.html#voice">お客様の声</a>
+                <a href="index.html#column">美容コラム</a>
+                <a href="index.html#access">店舗情報</a>
+            </nav>
+            <div class="footer-sns">
+                <a href="https://www.instagram.com/relaxation_relair" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://x.com/relair16" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 トータルビューティー リレア. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 共通スクリプトを読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>

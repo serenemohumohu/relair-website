@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スタッフ紹介 - トータルビューティー リレア</title>
+    <!-- 共通CSSとページ固有CSSを読み込み -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- トップページと共通のヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./photo/relair_logo.png" alt="トータルビューティー リレア" class="logo-img" />
+                </a>
+            </h1>
+            <ul class="header-nav">
+                <li><a href="index.html#treatment">施術紹介</a></li>
+                <li><a href="index.html#staff">スタッフ紹介</a></li>
+                <li><a href="index.html#voice">お客様の声</a></li>
+                <li><a href="index.html#column">美容コラム</a></li>
+                <li><a href="index.html#access">店舗情報</a></li>
+            </ul>
+            <div class="header-buttons">
+                <a href="https://lin.ee/5N9K074" class="header-btn line" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="header-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPER</a>
+                <a href="recruit.html" class="header-btn recruit">セラピスト募集</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="global-nav" id="global-nav">
+            <ul>
+                <li><a href="index.html#treatment">施術紹介</a></li>
+                <li><a href="index.html#staff">スタッフ紹介</a></li>
+                <li><a href="index.html#voice">お客様の声</a></li>
+                <li><a href="index.html#column">美容コラム</a></li>
+                <li><a href="index.html#access">店舗情報</a></li>
+                <li class="nav-sp-buttons">
+                    <a href="https://lin.ee/5N9K074" class="header-btn line" target="_blank" rel="noopener noreferrer">公式LINEで予約</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="header-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPERで予約</a>
+                    <a href="recruit.html" class="header-btn recruit">セラピスト募集</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <!-- ファーストビュー -->
+        <section class="page-hero" style="background-image: url('./photo/staff_group.png' );">
+            <div class="page-hero-inner">
+                <h1 class="page-title anim-fade-in">OUR TEAM</h1>
+                <p class="page-subtitle anim-fade-in">あなたに寄り添う、美のプロフェッショナルチーム</p>
+            </div>
+        </section>
+
+        <!-- スタッフ紹介 -->
+        <section class="section anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">スタッフ紹介</h2>
+                <p class="section-subtitle">豊富な知識と経験を持つ専門スタッフが、お客様一人ひとりのお悩みに真摯に向き合います。</p>
+                
+                <div class="staff-grid">
+                    <!-- スタッフカード 1: 岩下 -->
+                    <div class="staff-card">
+                        <div class="staff-card-img-wrapper">
+                            <img src="./photo/youmeno.png" alt="岩下 由芽乃" class="staff-card-img">
+                        </div>
+                        <div class="staff-card-body">
+                            <p class="staff-card-job">セラピスト (歴5年)</p>
+                            <h3 class="staff-card-name">岩下 由芽乃 <span class="staff-card-kana">イワシタ ユメノ</span></h3>
+                            <div class="staff-card-tags">
+                                <span class="tag">#メンズ脱毛</span>
+                                <span class="tag">#痩身</span>
+                                <span class="tag">#美肌ケア</span>
+                            </div>
+                            <p class="staff-card-intro">
+                                脱毛を中心に、様々な施術を担当しています。5年間の経験を生かし、特に脱毛には自信を持っていますが、お客様の多様なニーズにも幅広く対応します。一人ひとりに合わせた丁寧な施術で、お客様の美をサポートします。
+                            </p>
+                            <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500545&staffId=W000546160" class="staff-card-btn" target="_blank" rel="noopener noreferrer">このスタッフを指名して予約</a>
+                        </div>
+                    </div>
+
+                    <!-- スタッフカード 2: 首藤 -->
+                    <div class="staff-card">
+                        <div class="staff-card-img-wrapper">
+                            <img src="./photo/Shuto.png" alt="首藤" class="staff-card-img">
+                        </div>
+                        <div class="staff-card-body">
+                            <p class="staff-card-job">セラピスト / 整体師 (歴5年 )</p>
+                            <h3 class="staff-card-name">首藤 <span class="staff-card-kana">シュトウ</span></h3>
+                            <div class="staff-card-tags">
+                                <span class="tag">#骨盤矯正</span>
+                                <span class="tag">#猫背矯正</span>
+                                <span class="tag">#首肩こり</span>
+                            </div>
+                            <p class="staff-card-intro">
+                                整体師、リンパマッスル、トリートメントの各資格を保持。特に首や肩のこりを解放する施術が得意で、お客様からはその手技を高く評価されています。心地よい施術で、あなたの日常生活に潜む疲れを優しく解放し、心と体のリラクゼーションを提供します。
+                            </p>
+                            <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500545&staffId=W000678140" class="staff-card-btn" target="_blank" rel="noopener noreferrer">このスタッフを指名して予約</a>
+                        </div>
+                    </div>
+
+                    <!-- スタッフカード 3: 橋本 -->
+                    <div class="staff-card">
+                        <div class="staff-card-img-wrapper">
+                            <img src="./photo/Hashimoto.jpg" alt="橋本" class="staff-card-img">
+                        </div>
+                        <div class="staff-card-body">
+                            <p class="staff-card-job">セラピスト (歴16年 )</p>
+                            <h3 class="staff-card-name">橋本 <span class="staff-card-kana">ハシモト</span></h3>
+                            <div class="staff-card-tags">
+                                <span class="tag">#足つぼ</span>
+                                <span class="tag">#もみほぐし</span>
+                                <span class="tag">#リフレクソロジー</span>
+                            </div>
+                            <p class="staff-card-intro">
+                                16年以上の施術歴を誇る経験豊かなスタッフです。特に足つぼリフレクソロジーや揉みほぐしの技術に長けており、多くのお客様に支持されています。資格はありませんが、その手技と経験から生み出される癒しは、多くのリピーターに愛されています。
+                            </p>
+                            <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500545&staffId=W000546155" class="staff-card-btn" target="_blank" rel="noopener noreferrer">このスタッフを指名して予約</a>
+                        </div>
+                    </div>
+
+                    <!-- スタッフカード 4: 原田 -->
+                    <div class="staff-card">
+                        <div class="staff-card-img-wrapper">
+                            <img src="./photo/Harada.png" alt="原田" class="staff-card-img">
+                        </div>
+                        <div class="staff-card-body">
+                            <p class="staff-card-job">セラピスト (歴5年 )</p>
+                            <h3 class="staff-card-name">原田 <span class="staff-card-kana">ハラダ</span></h3>
+                            <div class="staff-card-tags">
+                                <span class="tag">#オイルトリートメント</span>
+                                <span class="tag">#フェイシャル</span>
+                                <span class="tag">#アロマ</span>
+                            </div>
+                            <p class="staff-card-intro">
+                                アロマ検定を保持し、リフレクソロジストとしても5年の実績があります。アロマボディトリートメント、フェイシャル、もみほぐしを得意とし、お客様の身体だけでなく心にも寄り添うケアを提供します。日常生活に少しのエールを送れるよう、対話も大切にしています。
+                            </p>
+                            <a href="https://beauty.hotpepper.jp/CSP/kr/reserve/?storeId=H000500545&staffId=W000994796" class="staff-card-btn" target="_blank" rel="noopener noreferrer">このスタッフを指名して予約</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 私たちの想い -->
+        <section class="section bg-beige anim-fade-in">
+            <div class="container text-center">
+                <h2 class="section-title">私たちの想い</h2>
+                <p class="section-subtitle">技術はもちろん、心に寄り添うコミュニケーションを大切にしています 。</p>
+                <p style="max-width: 700px; margin: 0 auto;">
+                    リレアでは、お客様一人ひとりが抱えるお悩みに、真摯に向き合うことをお約束します。<br>
+                    初めての方も、どうぞ安心してお悩みをお聞かせください。<br>
+                    私たちプロフェッショナルチームが、あなたの「なりたい自分」を全力でサポートします。
+                </p>
+            </div>
+        </section>
+
+        <!-- 店舗情報・アクセス (共通) -->
+        <section id="access" class="section anim-fade-in">
+            <div class="container">
+                <h2 class="section-title">ACCESS</h2>
+                <p class="section-subtitle">店舗情報</p>
+                <div class="access-container">
+                    <div class="access-info">
+                        <h3>トータルビューティー リレア</h3>
+                        <p>〒874-0910<br />大分県別府市石垣西3-2-21<br />Domus Ishigaki w02号</p>
+                        <p><strong>電話番号:</strong> 050-8887-1232</p>
+                        <p><strong>アクセス:</strong><br />【駐車場完備】<br />別府駅から車で5分・徒歩20分<br />南石垣バス停から徒歩1分</p>
+                        <p><strong>営業時間:</strong><br />月曜～土曜 10:00～20:00</p>
+                        <p><strong>定休日:</strong><br />日曜・祝日不定休</p>
+                    </div>
+                    <div class="access-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.088301592446!2d131.4829583762579!3d33.29111897336199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3546a347a5997631%3A0x889c288965882c5!2z44OI44Kq44K%2F44Or44O744K544Kv44OG44Kj44K544O844Oa44O8IOODreODoOOCouOCog!5e0!3m2!1sja!2sjp!4v1721142647653!5m2!1sja!2sjp" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター (共通 ) -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">トータルビューティー リレア</div>
+            <div class="footer-contact">
+                <p>ご予約・お問い合わせはこちら</p>
+                <div class="footer-buttons">
+                    <a href="https://lin.ee/5N9K074" class="footer-btn line" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="footer-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPER</a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html#treatment">施術紹介</a>
+                <a href="index.html#staff">スタッフ紹介</a>
+                <a href="index.html#voice">お客様の声</a>
+                <a href="index.html#column">美容コラム</a>
+                <a href="index.html#access">店舗情報</a>
+            </nav>
+            <div class="footer-sns">
+                <a href="https://www.instagram.com/relaxation_relair" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://x.com/relair16" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 トータルビューティー リレア. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 共通スクリプトを読み込み -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+/* --- Page Hero --- */
+.page-main {
+    padding-top: 60px; /* 固定ヘッダー分の余白 */
+}
+.page-hero {
+    height: 40vh;
+    min-height: 300px;
+    /* ▼▼▼ 修正: containで画像全体を表示し、背景色を指定 ▼▼▼ */
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: var(--primary-color); /* 余白の背景色 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 修正: containを使うため、オーバーレイは少し薄くするか、場合によっては不要 */
+    background: rgba(26, 46, 68, 0.3); 
+}
+.page-hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+.page-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.page-subtitle {
+    font-size: 1.1rem;
+    margin: 10px 0 0;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* --- CTA Bar --- */
+.cta-bar {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px 0;
+}
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.cta-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.cta-text .highlight {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+.cta-text .price {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+}
+.cta-btn {
+    display: inline-block;
+    background-color: var(--recruit-red);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.cta-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+/* --- Problem Section --- */
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.problem-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+.problem-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- Benefit Section --- */
+.benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.benefit-card {
+    text-align: center;
+}
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.benefit-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* --- Feature Section --- */
+.feature-list {
+    display: grid;
+    gap: 40px;
+}
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+.feature-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.feature-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- Voice Section (Page Specific) --- */
+.voice-grid-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.voice-card-page {
+    background: var(--bg-beige);
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    border-left: 5px solid var(--secondary-color);
+}
+.voice-card-page::before {
+    content: "“";
+    font-family: serif;
+    font-size: 6rem;
+    color: var(--primary-color);
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    opacity: 0.05;
+    z-index: 0;
+    line-height: 1;
+}
+.voice-text-page {
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.voice-meta-page {
+    text-align: right;
+    font-weight: bold;
+    color: #888;
+}
+
+/* --- Pricing Section --- */
+.pricing-table {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.pricing-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px 20px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.pricing-row:last-child {
+    border-bottom: none;
+}
+.pricing-service {
+    font-weight: bold;
+}
+.pricing-note {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    justify-self: start;
+}
+.pricing-note:empty {
+    display: none;
+}
+.pricing-price {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+/* --- Flow Section --- */
+.flow-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    position: relative;
+}
+.step-card {
+    background: var(--bg-beige);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+}
+.step-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* --- FAQ Section --- */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+}
+.faq-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.faq-icon {
+    width: 1em;
+    height: 1em;
+    border-left: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    transform: rotate(-45deg);
+    transition: transform 0.3s;
+}
+.faq-item.active .faq-icon {
+    transform: rotate(135deg);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.faq-answer p {
+    padding: 0 20px 20px;
+}
+.faq-item.active .faq-answer {
+    max-height: 200px; /* 十分な高さを確保 */
+}
+
+/* --- Staff Page Specific --- */
+.staff-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+.staff-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.staff-card-img-wrapper {
+    width: 100%;
+    padding-top: 100%; /* 1:1の比率を維持 */
+    position: relative;
+    /* ▼▼▼ 修正: 余白の背景色を指定 ▼▼▼ */
+    background-color: var(--bg-beige);
+}
+.staff-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ▼▼▼ 修正: containで画像全体を表示 ▼▼▼ */
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+.staff-card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.staff-card-job {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+.staff-card-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.staff-card-kana {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #888;
+    margin-left: 10px;
+}
+.staff-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.tag {
+    background: var(--bg-beige);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.staff-card-intro {
+    margin-bottom: 25px;
+    flex-grow: 1; /* ボタンを一番下に配置するため */
+}
+.staff-card-btn {
+    display: block;
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+.staff-card-btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+/* --- Responsive (Page Specific) --- */
+@media (min-width: 769px) {
+    .page-main {
+        padding-top: 80px;
+    }
+    .page-title {
+        font-size: 3.5rem;
+    }
+    .cta-bar {
+        padding: 25px 0;
+    }
+    .cta-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .cta-text {
+        font-size: 1.5rem;
+    }
+    .cta-text .price {
+        font-size: 2.5rem;
+    }
+    .problem-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .benefit-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .feature-item {
+        flex-direction: row;
+        text-align: left;
+        gap: 40px;
+    }
+    .feature-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    .feature-img {
+        width: 45%;
+        flex-shrink: 0;
+    }
+    .pricing-row {
+        grid-template-columns: 1fr auto auto;
+        padding: 25px 30px;
+    }
+    .pricing-note {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: end;
+    }
+    .pricing-price {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        font-size: 1.8rem;
+    }
+    .flow-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .flow-steps::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: 12.5%;
+        right: 12.5%;
+        height: 2px;
+        background: #e0e0e0;
+        z-index: -1;
+    }
+    .step-card {
+        background: none;
+    }
+    .step-number {
+        background: var(--bg-beige);
+    }
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    .staff-card {
+        flex-direction: row;
+    }
+    .staff-card-img-wrapper {
+        width: 40%;
+        padding-top: 0; /* 比率維持を解除 */
+        flex-shrink: 0;
+    }
+    .staff-card-body {
+        padding: 30px;
+    }
+}
+
+/* page.css の末尾に追記 */
+
+/* --- Column List Page --- */
+.column-card {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background: #fff;
+    transition: all 0.3s;
+}
+.column-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+.column-card-img-wrapper {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    background-color: #eee;
+}
+.column-card-img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.column-body {
+    padding: 20px;
+}
+.column-body time {
+    font-size: 0.8rem;
+    color: #888;
+}
+.column-body h4 {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 5px 0 10px;
+    font-weight: bold;
+}
+.column-excerpt {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}

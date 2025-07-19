@@ -1,219 +1,4 @@
-/* --- Reset & Basic Settings --- */
-:root {
-    --primary-color: #1a2e44;
-    --secondary-color: #d4af37;
-    --text-color: #333;
-    --bg-white: #fff;
-    --bg-beige: #fdfaf6; /* より上品なベージュに調整 */
-    --font-body: "Noto Sans JP", sans-serif;
-    --font-heading: "Montserrat", sans-serif;
-}
-
-body {
-    margin: 0;
-    font-family: var(--font-body);
-    color: var(--text-color);
-    line-height: 1.8;
-    background: var(--bg-white);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* メニュー表示中のスクロール禁止 */
-body.no-scroll {
-    overflow: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.3s;
-}
-a:hover {
-    opacity: 0.7;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-}
-
-.section-container {
-    padding: 80px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden; /* 背景装飾のはみ出し防止 */
-}
-
-.section-title {
-    font-family: var(--font-heading);
-    font-size: 2.8rem;
-    color: var(--primary-color);
-    text-align: center;
-    margin: 0;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-}
-
-.section-subtitle {
-    text-align: center;
-    margin: 0 0 50px 0;
-    color: #888;
-}
-
-.bg-beige {
-    background-color: var(--bg-beige);
-}
-
-.text-center {
-    text-align: center;
-}
-
-.btn-more {
-    display: inline-block;
-    padding: 12px 40px;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    font-weight: bold;
-    margin-top: 20px;
-    transition: all 0.3s;
-}
-.btn-more:hover {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-/* --- Header --- */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #fff;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.header-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    max-width: 1280px;
-    margin: 0 auto;
-    height: 60px;
-}
-
-.logo-img {
-    height: 28px;
-    width: auto;
-}
-
-.header-nav, .header-buttons {
-    display: none;
-}
-
-.hamburger {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1001;
-    padding: 0;
-}
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: var(--primary-color);
-    margin: 6px 0;
-    transition: all 0.3s;
-}
-
-.global-nav {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26, 46, 68, 0.98);
-    color: #fff;
-    transform: translateY(-100%);
-    transition: transform 0.4s ease;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.global-nav.active {
-    transform: translateY(0);
-}
-.global-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-.global-nav li {
-    margin: 20px 0;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s, transform 0.4s;
-}
-.global-nav.active li {
-    opacity: 1;
-    transform: translateY(0);
-}
-/* メニュー項目の表示遅延 */
-.global-nav.active li:nth-child(1) { transition-delay: 0.1s; }
-.global-nav.active li:nth-child(2) { transition-delay: 0.15s; }
-.global-nav.active li:nth-child(3) { transition-delay: 0.2s; }
-.global-nav.active li:nth-child(4) { transition-delay: 0.25s; }
-.global-nav.active li:nth-child(5) { transition-delay: 0.3s; }
-.global-nav.active li:nth-child(6) { transition-delay: 0.35s; }
-
-.global-nav li a {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.nav-sp-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-}
-.header-btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-align: center;
-    transition: transform 0.2s;
-}
-.header-btn:hover {
-    transform: scale(1.05);
-}
-.line { background-color: #06c755; }
-.hotpepper { background-color: #ff7700; }
-
-.hamburger.active span {
-    background-color: #fff;
-}
-.hamburger.active span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
-/* --- Main Visual --- */
+/* --- Main Visual (Top Page) --- */
 .mv {
     width: 100%;
     height: 100vh;
@@ -295,15 +80,13 @@ img {
     100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-/* --- Section Styles & Animations --- */
-.anim-fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.anim-fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+/* --- Section Styles (Top Page) --- */
+.section-container {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Card */
@@ -329,7 +112,7 @@ img {
     margin-top: 15px;
 }
 
-/* --- ▼▼▼ Staff (修正箇所) ▼▼▼ --- */
+/* Staff */
 #staff.bg-beige::before {
     content: '';
     position: absolute;
@@ -348,21 +131,19 @@ img {
     align-items: center;
 }
 .staff-photo {
-    max-width: 60%; /* 写真の最大幅を調整 */
-    margin: 0 auto; /* 中央揃え */
+    max-width: 60%;
+    margin: 0 auto;
 }
 .staff-photo img {
     border-radius: 10px;
 }
 .staff-text {
-    text-align: center; /* スマホ表示でテキストを中央揃え */
+    text-align: center;
 }
 .staff-text h3 {
     font-size: 1.8rem;
     color: var(--primary-color);
 }
-/* --- ▲▲▲ Staff (修正箇所) ▲▲▲ --- */
-
 
 /* Voice */
 .wavy-divider {
@@ -453,67 +234,10 @@ img {
 }
 .access-info h3 { font-size: 1.8rem; color: var(--primary-color); }
 
-/* Footer */
-.footer {
-    background-color: var(--primary-color);
-    color: rgba(255,255,255,0.8);
-    padding: 60px 20px;
-    text-align: center;
-}
-.footer-inner { max-width: 1100px; margin: 0 auto; }
-.footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; color: #fff; }
-.footer-contact p { margin-bottom: 15px; }
-.footer-buttons { display: flex; justify-content: center; gap: 15px; }
-.footer-nav { margin: 40px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 30px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
-.copyright { margin-top: 30px; font-size: 0.8rem; opacity: 0.7; }
-
-/* --- Responsive Design --- */
+/* --- Responsive (Top Page Specific) --- */
 @media (min-width: 769px) {
     .section-container {
         padding: 120px 40px;
-    }
-    .header-inner {
-        padding: 0 40px;
-        height: 80px;
-    }
-    .logo-img {
-        height: 36px;
-    }
-    .hamburger {
-        display: none;
-    }
-    .header-nav {
-        display: flex;
-        align-items: center;
-        gap: 32px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    .header-nav a {
-        color: var(--primary-color);
-        font-weight: bold;
-        position: relative;
-    }
-    .header-nav a::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--secondary-color);
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.3s;
-    }
-    .header-nav a:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    .header-buttons {
-        display: flex;
-        gap: 10px;
     }
     .slide-caption h2 {
         font-size: 3rem;
@@ -527,11 +251,11 @@ img {
     }
     .staff-photo {
         flex: 1;
-        max-width: none; /* PCではmax-widthをリセット */
+        max-width: none;
     }
     .staff-text {
         flex: 1;
-        text-align: left; /* PCではテキストを左揃え */
+        text-align: left;
     }
     .voice-grid {
         grid-template-columns: repeat(3, 1fr);

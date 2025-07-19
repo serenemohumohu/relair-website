@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容コラム一覧 - トータルビューティー リレア</title>
+    <!-- 共通CSSとページ固有CSSを読み込み -->
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="page.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- 共通ヘッダー -->
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./photo/relair_logo.png" alt="トータルビューティー リレア" class="logo-img" />
+                </a>
+            </h1>
+            <ul class="header-nav">
+                <li><a href="index.html#treatment">施術紹介</a></li>
+                <li><a href="staff.html">スタッフ紹介</a></li>
+                <li><a href="index.html#voice">お客様の声</a></li>
+                <li><a href="column-list.html">美容コラム</a></li>
+                <li><a href="index.html#access">店舗情報</a></li>
+            </ul>
+            <div class="header-buttons">
+                <a href="https://lin.ee/5N9K074" class="header-btn line" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="header-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPER</a>
+                <a href="recruit.html" class="header-btn recruit">セラピスト募集</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="global-nav" id="global-nav">
+            <ul>
+                <li><a href="index.html#treatment">施術紹介</a></li>
+                <li><a href="staff.html">スタッフ紹介</a></li>
+                <li><a href="index.html#voice">お客様の声</a></li>
+                <li><a href="column-list.html">美容コラム</a></li>
+                <li><a href="index.html#access">店舗情報</a></li>
+                <li class="nav-sp-buttons">
+                    <a href="https://lin.ee/5N9K074" class="header-btn line" target="_blank" rel="noopener noreferrer">公式LINEで予約</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="header-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPERで予約</a>
+                    <a href="recruit.html" class="header-btn recruit">セラピスト募集</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <!-- ファーストビュー -->
+        <section class="page-hero" style="background-image: url('./photo/column_fv.jpg' );">
+            <div class="page-hero-inner">
+                <h1 class="page-title anim-fade-in">BEAUTY COLUMN</h1>
+                <p class="page-subtitle anim-fade-in">もっと輝く自分になるための、美容情報をお届け</p>
+            </div>
+        </section>
+
+        <!-- コラム一覧 -->
+        <section class="section anim-fade-in">
+            <div class="container">
+               <!-- column-list.html の card-grid 部分を差し替え -->
+<div class="card-grid">
+    <!-- コラムカード 1 -->
+    <a href="mens-hair-removal-guide.html" class="column-card">
+        <div class="column-card-img-wrapper">
+            <img src="./photo/column_datumou.png" alt="男性が鏡を見ている" />
+        </div>
+        <div class="column-body">
+            <time>2025.07.19</time>
+            <h4>【メンズ脱毛】始める前に知っておきたい5つのこと｜後悔しないための完全ガイド</h4>
+            <p class="column-excerpt">医療とサロンの違い、痛み、料金、回数など、メンズ脱毛のあらゆる疑問を解決します。</p>
+        </div>
+    </a>
+    <!-- コラムカード 2 -->
+    <a href="nekoze-stretch-home.html" class="column-card">
+        <div class="column-card-img-wrapper">
+            <img src="./photo/posture_towel_stretch.png" alt="自宅でリラックスしながらストレッチをする女性" />
+        </div>
+        <div class="column-body">
+            <time>2025.07.19</time>
+            <h4>自宅で簡単！1日5分の猫背改善ストレッチ｜つらい肩こり・首こりも解消</h4>
+            <p class="column-excerpt">整体やジムに通う時間がない忙しいあなたのために、自宅でできる簡単ストレッチを厳選してご紹介。</p>
+        </div>
+    </a>
+    <!-- コラムカード 3 (今回追加) -->
+    <a href="summer-detox-guide.html" class="column-card">
+        <div class="column-card-img-wrapper">
+            <img src="./photo/column_detox_main.png" alt="ハーブティーを飲んでリラックスする女性" />
+        </div>
+        <div class="column-body">
+            <time>2025.07.19</time>
+            <h4>そのダルさ、夏の"むくみ"が原因かも？プロが教える本気のデトックス術</h4>
+            <p class="column-excerpt">夏の原因不明の不調の正体「水毒」とは？溜め込んだものを排出し、軽やかな体を取り戻しましょう。</p>
+        </div>
+    </a>
+</div>
+
+
+
+                <!-- ここにページネーションなどを追加可能 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 共通フッター -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-logo">トータルビューティー リレア</div>
+            <div class="footer-contact">
+                <p>ご予約・お問い合わせはこちら</p>
+                <div class="footer-buttons">
+                    <a href="https://lin.ee/5N9K074" class="footer-btn line" target="_blank" rel="noopener noreferrer">公式LINE</a>
+                    <a href="https://beauty.hotpepper.jp/kr/slnH000500545/" class="footer-btn hotpepper" target="_blank" rel="noopener noreferrer">HOT PEPPER</a>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <a href="index.html#treatment">施術紹介</a>
+                <a href="staff.html">スタッフ紹介</a>
+                <a href="index.html#voice">お客様の声</a>
+                <a href="column-list.html">美容コラム</a>
+                <a href="index.html#access">店舗情報</a>
+            </nav>
+            <div class="footer-sns">
+                <a href="https://www.instagram.com/relaxation_relair" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                <a href="https://x.com/relair16" class="sns-icon" target="_blank" rel="noopener noreferrer" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            </div>
+            <p class="copyright">&copy; 2025 トータルビューティー リレア. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

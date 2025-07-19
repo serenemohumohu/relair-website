@@ -1,0 +1,348 @@
+/* --- Reset & Basic Settings --- */
+:root {
+    --primary-color: #1a2e44;
+    --secondary-color: #d4af37;
+    --text-color: #333;
+    --bg-white: #fff;
+    --bg-beige: #fdfaf6;
+    --font-body: "Noto Sans JP", sans-serif;
+    --font-heading: "Montserrat", sans-serif;
+    --recruit-red: #c83c3c;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text-color);
+    line-height: 1.8;
+    background: var(--bg-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* ▼▼▼ SP版の横スクロール防止 ▼▼▼ */
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.section {
+    padding: 80px 0;
+    overflow-x: hidden; /* ▼▼▼ SP版の横スクロール防止 ▼▼▼ */
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 0 0 20px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin: 0 auto 50px;
+    color: #888;
+    max-width: 600px;
+}
+
+.bg-beige {
+    background-color: var(--bg-beige);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 12px 40px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+.btn-more:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* --- Header --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.logo-img {
+    height: 28px;
+    width: auto;
+}
+
+.header-nav, .header-buttons {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 6px 0;
+    transition: all 0.3s;
+}
+
+.global-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 46, 68, 0.98);
+    color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.global-nav.active {
+    transform: translateY(0);
+}
+.global-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.global-nav li {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+.global-nav.active li {
+    opacity: 1;
+    transform: translateY(0);
+}
+.global-nav.active li:nth-child(1) { transition-delay: 0.1s; }
+.global-nav.active li:nth-child(2) { transition-delay: 0.15s; }
+.global-nav.active li:nth-child(3) { transition-delay: 0.2s; }
+.global-nav.active li:nth-child(4) { transition-delay: 0.25s; }
+.global-nav.active li:nth-child(5) { transition-delay: 0.3s; }
+.global-nav.active li:nth-child(6) { transition-delay: 0.35s; }
+
+.global-nav li a {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.nav-sp-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+.header-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s;
+}
+.header-btn:hover {
+    transform: scale(1.05);
+}
+.line { background-color: #06c755; }
+.hotpepper { background-color: #ff7700; }
+.recruit { background-color: var(--recruit-red); }
+
+.hamburger.active span {
+    background-color: #fff;
+}
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Animations --- */
+.anim-fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.anim-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Access (Common) --- */
+/* ▼▼▼ 店舗情報セクションのスタイルを共通化 ▼▼▼ */
+.access-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.access-map iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+}
+.access-info h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--primary-color);
+    color: rgba(255,255,255,0.8);
+    padding: 60px 20px;
+    text-align: center;
+}
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; color: #fff; }
+.footer-contact p { margin-bottom: 15px; }
+.footer-buttons { display: flex; justify-content: center; gap: 15px; }
+.footer-nav { margin: 40px 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 30px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+
+.footer-sns {
+    margin: 40px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.sns-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.sns-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    opacity: 1;
+}
+.sns-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.copyright { margin-top: 40px; font-size: 0.8rem; opacity: 0.7; }
+
+/* --- Responsive Design (Common) --- */
+@media (min-width: 769px) {
+    .section {
+        padding: 120px 0;
+    }
+    .header-inner {
+        padding: 0 40px;
+        height: 80px;
+    }
+    .logo-img {
+        height: 36px;
+    }
+    .hamburger {
+        display: none;
+    }
+    .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .header-nav a {
+        color: var(--primary-color);
+        font-weight: bold;
+        position: relative;
+    }
+    .header-nav a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--secondary-color);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s;
+    }
+    .header-nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .header-buttons {
+        display: flex;
+        gap: 10px;
+    }
+    /* ▼▼▼ 店舗情報セクションのPCレイアウトを共通化 ▼▼▼ */
+    .access-container {
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+    }
+    .access-info, .access-map {
+        flex: 1;
+    }
+}
