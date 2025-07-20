@@ -1,0 +1,355 @@
+/* recruit.css */
+
+/* --- 採用ページ専用スタイル --- */
+
+.pc-only {
+  display: none;
+}
+@media (min-width: 769px) {
+  .pc-only {
+    display: block;
+  }
+  .sp-only {
+    display: none;
+  }
+}
+
+/* --- ページメイン --- */
+.main-page-main {
+  padding-top: 60px; /* 固定ヘッダー分の余白 */
+}
+@media (min-width: 769px) {
+  .main-page-main {
+    padding-top: 80px;
+  }
+}
+
+/* --- ページタイトル（ファーストビュー） --- */
+.page-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+}
+.page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 46, 68, 0.6);
+}
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+.page-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.page-subtitle {
+  font-size: 1.1rem;
+  margin: 10px 0 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- セクションタイトル --- */
+.section-title-stacked {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-title-stacked .ja {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  line-height: 1.4;
+}
+.section-title-stacked .en {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+  letter-spacing: 0.1em;
+}
+
+/* --- リード文 --- */
+.lead-text {
+  font-size: 1rem;
+  line-height: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- 3つの魅力 (Feature) --- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+.feature-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.feature-card p {
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* --- 募集要項テーブル --- */
+.recruit-table {
+  margin-top: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+.recruit-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.recruit-table th,
+.recruit-table td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+.recruit-table tr:last-child th,
+.recruit-table tr:last-child td {
+  border-bottom: none;
+}
+.recruit-table th {
+  background-color: var(--bg-beige);
+  width: 100%;
+  font-weight: bold;
+}
+.recruit-table td {
+  width: 100%;
+  line-height: 1.9;
+}
+.recruit-table small {
+  display: block;
+  margin-top: 8px;
+  color: #888;
+  font-size: 0.85rem;
+}
+.recruit-table strong {
+  background: linear-gradient(transparent 60%, rgba(212, 175, 55, 0.4) 60%);
+  padding: 0 2px;
+  font-weight: bold;
+}
+
+/* --- 1日の流れ (Timeline) --- */
+.timeline {
+  position: relative;
+  margin: 40px auto 0;
+  padding-left: 30px;
+  border-left: 3px solid var(--secondary-color);
+  max-width: 600px;
+}
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 3px solid var(--secondary-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline-time {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+.timeline-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* --- 応募プロセス (Step Flow) --- */
+.step-flow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px 30px;
+  margin-top: 40px;
+}
+.step-item {
+  text-align: center;
+  position: relative;
+}
+.step-number {
+  width: 60px;
+  height: 60px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: #fff;
+  z-index: 2;
+  position: relative;
+}
+.step-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* --- 応募CTA --- */
+.closing-cta-section {
+  padding: 80px 0;
+  background-color: var(--bg-beige);
+}
+.article-closing-cta {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+}
+.closing-title {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+.closing-subtitle {
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+.closing-cta-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.closing-cta-content p {
+  color: #333;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.7;
+}
+.cta-note {
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  font-weight: normal;
+}
+/* ▼▼▼ CTAボタンのスタイル修正 ▼▼▼ */
+.closing-cta-content .header-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block; /* 修正 */
+  width: auto; /* 修正 */
+}
+
+/* --- レスポンシブ対応 --- */
+@media (min-width: 769px) {
+  .page-hero {
+    padding: 120px 20px;
+    min-height: 300px;
+  }
+  .section-title-stacked .ja {
+    font-size: 1.8rem;
+  }
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .recruit-table th {
+    width: 30%;
+  }
+  .recruit-table td {
+    width: 70%;
+  }
+  .recruit-table th,
+  .recruit-table td {
+    display: table-cell;
+  }
+  .step-flow {
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+  }
+  .step-flow::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 15%;
+    right: 15%;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 1;
+  }
+  .closing-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recruit-table th,
+  .recruit-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .recruit-table th {
+    border-bottom: none;
+    padding-bottom: 5px;
+  }
+  .recruit-table td {
+    padding-top: 0;
+  }
+  .timeline {
+    padding-left: 20px;
+  }
+  .timeline-item::before {
+    left: -28px;
+  }
+}
