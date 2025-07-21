@@ -5,6 +5,10 @@
   --foreground: #171717;
 }
 
+:root {
+  --primary-color: #0f172a; /* 紺色っぽい色だよ。好きな色でもOK！ */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -69,6 +73,21 @@ body.no-scroll {
   background: #d4af37 !important;
 }
 
+.section-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* = 16px */
+  padding-right: 1rem;
+}
+
+@media (min-width: 769px) {
+  .section-container {
+    padding-left: 2rem; /* = 32px */
+    padding-right: 2rem;
+  }
+}
+
 /* スタッフ紹介セクションの斜め背景 */
 #staff::before {
   content: "";
@@ -81,4 +100,61 @@ body.no-scroll {
   opacity: 0.03;
   transform: skewX(-15deg);
   z-index: -1; /* 文字の後ろに隠れるようにする */
+}
+
+/* --- ここから page.css の中身をペースト --- */
+
+/* --- Page Hero --- */
+.page-main {
+  padding-top: 60px; /* 固定ヘッダー分の余白 */
+}
+.page-hero {
+  height: 40vh;
+  /* …以下 page.css の全ルール… */
+}
+
+/* 問題セクション */
+.problem-grid {
+  /* … */
+}
+/* 解決策セクション */
+.benefit-grid {
+  /* … */
+}
+/* …以下すべて… */
+
+/* --- ここまで --- */
+
+/* --- ページ幅と余白を制御するコンテナ --- */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem;
+}
+
+/* 中〜大画面では余白を広げる */
+@media (min-width: 769px) {
+  .container {
+    padding-left: 2rem; /* 32px */
+    padding-right: 2rem;
+  }
+}
+
+/* --- 各セクションに共通の上下余白 --- */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (min-width: 769px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+/* 下層ページ用のスタイル */
+.text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }

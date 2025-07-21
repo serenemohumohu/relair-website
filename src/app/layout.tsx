@@ -1,8 +1,13 @@
+// app/layout.tsx
+
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Montserrat } from "next/font/google";
+
+// 既存のグローバルCSS
 import "./globals.css";
+
 import Header from "@/components/Header";
-import Footer from "@/components/Footer"; // ← これを追加
+import Footer from "@/components/Footer";
 
 const notoSansJp = Noto_Sans_JP({
   subsets: ["latin"],

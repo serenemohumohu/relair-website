@@ -128,7 +128,7 @@ export default function Home() {
       {/* スタッフ紹介 */}
       <AnimatedSection
         id="staff"
-        className="py-20 md:py-32 px-5 bg-[#fdfaf6] relative overflow-hidden"
+        className="section-container relative bg-[#fdfaf6] overflow-hidden py-20 md:py-32"
       >
         <div className="max-w-6xl mx-auto">
           <SectionTitle title="STAFF" subtitle="スタッフ紹介" />
